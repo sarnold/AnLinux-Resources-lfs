@@ -4,7 +4,7 @@ if [ -d "$folder" ]; then
 	first=1
 	echo "skipping downloading"
 fi
-tarball="gentoo-rootfs.tar.xz"
+tarball="gentoo-rootfs.tar.gz"
 if [ "$first" != 1 ];then
 	if [ ! -f $tarball ]; then
 		echo "Download Rootfs, this may take a while based on your internet speed."
@@ -24,7 +24,7 @@ if [ "$first" != 1 ];then
 		*)
 			echo "unknown architecture"; exit 1 ;;
 		esac
-		wget "https://releases.orchardos.com/orchardos-${archurl}-musl-hardened-dev-20190310.tar.xz" -O $tarball
+		wget "https://releases.orchardos.com/orchardos-${archurl}-musl-hardened-dev-20190310.tar.gz" -O $tarball
 	fi
 	cur=`pwd`
 	mkdir -p "$folder"
