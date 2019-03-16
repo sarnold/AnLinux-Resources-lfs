@@ -1,5 +1,5 @@
-export USER=root
-export HOME=/root
+export USER=gentoo
+export HOME=/home/gentoo
 
 vncserver -kill :1
 rm -rf /tmp/.X1-lock
